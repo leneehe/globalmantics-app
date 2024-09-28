@@ -1,4 +1,5 @@
 import styles from "../conference.module.css";
+import Link from 'next/link';
 
 // Dynamic Data Fetching or Server Side Rendering
 async function fetchSessions() {
@@ -19,7 +20,9 @@ export default async function Page() {
         Last Rendered: {new Date().toLocaleTimeString()}
       </div>
       <h1>Welcome to Globomantics Sessions</h1>
-
+      <h2>
+        <Link href="/conference">Back to Conference</Link>
+      </h2>
       {data.sessions.map(
         ({ id, title, description, room, day, track, speakers }) => (
           <div key={id} className={styles.infoContainer}>

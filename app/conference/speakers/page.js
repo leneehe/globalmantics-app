@@ -23,6 +23,9 @@ export default async function Page() {
         Last Rendered: {new Date().toLocaleTimeString()}
       </div>
       <h1>Welcome to Globomantics Speakers</h1>
+      <h2>
+        <Link href="/conference">Back to Conference</Link>
+      </h2>
       {data.speakers.map(({ id, name, bio }) => (
         <div key={id} className={styles.infoContainer}>
           <Link
